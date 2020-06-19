@@ -20,7 +20,10 @@ namespace BankingApp {
             }
         }
         public void Withdraw(double Amount) {
-            
+            if (Amount < 0) {
+                Console.WriteLine("Amount must be positive.");
+            }
+
             if (Amount > Balance) {
                 Console.WriteLine("INSUFFICIENT FUNDS");
                 return;
